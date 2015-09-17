@@ -17,9 +17,13 @@
 # Inherit from msm8974-common
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
+# Include path
+TARGET_SPECIFIC_HEADER_PATH += device/oppo/find7-common/include
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 TARGET_KERNEL_CONFIG := cyanogenmod_find7_defconfig
+TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find7-common/bluetooth
@@ -46,4 +50,4 @@ TARGET_RECOVERY_FSTAB := device/oppo/find7-common/rootdir/etc/fstab.qcom
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 
 # Inherit from the proprietary version
--include vendor/oppo/find7/BoardConfigVendor.mk
+-include vendor/oppo/find7-common/BoardConfigVendor.mk
