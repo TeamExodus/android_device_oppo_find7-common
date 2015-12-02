@@ -21,7 +21,7 @@
 TARGET_SPECIFIC_HEADER_PATH += device/oppo/find7-common/include
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
 TARGET_KERNEL_CONFIG := cyanogenmod_find7_defconfig
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
 
@@ -40,6 +40,9 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13747929088 # 13747945472 - 16384 for crypto footer
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 3221225472
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_find7
 
 # Properties
 TARGET_SYSTEM_PROP += device/oppo/find7-common/system.prop
